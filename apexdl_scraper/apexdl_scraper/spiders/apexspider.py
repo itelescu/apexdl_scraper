@@ -92,8 +92,3 @@ class ApexspiderSpider(scrapy.Spider):
             'map': response.xpath("//meta[@property='og:title']/@content").get() if map_name else None,
             'gallery': [map_image for map_image in map_field if map_image.startswith('https://static')] if map_field else None
         }
-        
-        # for item in map_field:
-        #     if item.startswith('https://static'):
-        #         yield {: item}
-                
